@@ -41,6 +41,10 @@ public class BalancedBrackets {
             return false;
         }
 
+        if (unbalancedTest.contains("][]")) {
+            return false;
+        }
+
         if (!unbalancedTest.contains("[]")) {
             return false;
         }
@@ -53,6 +57,6 @@ public class BalancedBrackets {
     }
 
     public static void main(String[] args) {
-        System.out.println(BalancedBrackets.hasBalancedBrackets("H[ell]o!W[orl]d!"));
+        System.out.println(BalancedBrackets.hasBalancedBrackets("]][]"));
     }
 }

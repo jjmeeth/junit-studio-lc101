@@ -20,8 +20,13 @@ public class BalancedBracketsTest {
     }
 
     @Test
-    public void unbalancedBracketsReturnsFalse() {
+    public void closeAndOpenBracketsReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+    }
+
+    @Test
+    public void closeAndBracketSetReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("][]"));
     }
 
     @Test
@@ -39,6 +44,10 @@ public class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]]"));
     }
 
+    @Test
+    public void consecutiveBracketPairsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[][][]"));
+    }
 
 
 
